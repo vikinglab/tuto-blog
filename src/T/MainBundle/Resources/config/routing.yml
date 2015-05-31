@@ -1,0 +1,9 @@
+t_main_homepage:
+    path:     /
+    defaults: { _controller: TMainBundle:Default:index }
+
+t_main_tarif:
+    path:     /tarif
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'TMainBundle:Default:tarif.html.twig'

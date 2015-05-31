@@ -1,0 +1,14 @@
+{% extends 'TMainBundle::layout.html.twig' %}
+
+{% block title %}
+    {#je recupere le contenu du block parent#}
+    {{ parent() }} - Tarif
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <p>Ici le contenu de la page tarif</p>
+        </div>
+    </div>
+{% endblock %}

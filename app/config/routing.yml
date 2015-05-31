@@ -1,0 +1,4 @@
+t_main:
+    resource: "@TMainBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>{% block title %}Mon super site{% endblock %}</title>
+
+        <meta name="title" content="{% block page_title %}Mon super site{% endblock %}"/>
+        <meta name="description" content="{% block meta_desc %}mon premier site avec symfony 2{% endblock %}"/>
+
+        {% block stylesheet %}
+            <link rel="stylesheet" href="{{ asset('bundles/tmain/css/bootstrap.min.css') }}" />
+            <link rel="stylesheet" href="{{ asset('bundles/tmain/css/main.css') }}" />
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+    {% block javascripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ asset('bundles/tmain/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/tmain/js/main.js') }}"></script>
+    {% endblock %}
+</html>
