@@ -1,4 +1,3 @@
-tuto-blog
-=========
+# tuto-blog
+Tutoriel de création d'un mini blog avec symfony 2
 
-A Symfony project created on May 30, 2015, 8:33 pm.
