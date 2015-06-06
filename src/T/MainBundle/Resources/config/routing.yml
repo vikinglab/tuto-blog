@@ -4,6 +4,8 @@ t_main_homepage:
 
 t_main_tarif:
     path:     /tarif
-    defaults:
-        _controller: FrameworkBundle:Template:template
-        template: 'TMainBundle:Default:tarif.html.twig'
+    defaults: { _controller: TMainBundle:Default:tarif }
+
+t_main_contact:
+    path:     /contact
+    defaults: { _controller: TMainBundle:Default:contact }

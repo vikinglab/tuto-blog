@@ -4,19 +4,31 @@
 
     {% block header %}
         <div class="row">
-            <div class="col-md-12">
-                Header
+            <div class="col-md-10 col-md-offset-1">
+                <div class="btn-group menu-header">
+                    <a class="btn btn-default {% if app.request.get('_route') == 't_main_homepage' %}selected{% endif %}" href="{{ path('t_main_homepage') }}">Accueil</a>
+                    <a class="btn btn-default {% if app.request.get('_route') == 't_main_tarif' %}selected{% endif %}" href="{{ path('t_main_tarif') }}">Tarif</a>
+                    <a class="btn btn-default {% if app.request.get('_route') == 't_main_contact' %}selected{% endif %}" href="{{ path('t_main_contact') }}">Contact</a>
+                </div>
             </div>
         </div>
     {% endblock %}
+
+    {% for type, flashMessages in app.session.flashbag.all() %}
+        {% for flashMessage in flashMessages %}
+            <div class="alert alert-{{ type }}">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+    {% endfor %}
 
     {% block content %}
     {% endblock %}
 
     {% block footer %}
         <div class="row ">
-            <div class="col-md-12 ">
-                Footer
+            <div class="col-md-12">
+                <p class="text-center"><a href="http://www.viking-lab.fr" about="_blank">Viking Lab</a> - Yannick Lecesne </p>
             </div>
         </div>
     {% endblock %}
