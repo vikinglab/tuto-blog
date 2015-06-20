@@ -1,4 +1,5 @@
 <?php
+
 namespace T\MainBundle\Form\Data;
 
 use Symfony\Component\Validator\Constraints as Assert;
@@ -34,44 +35,53 @@ class Contact
      */
     protected $contenu;
 
-    public function getEmail(){
+    public function getEmail()
+    {
         return $this->email;
     }
 
-    public function setEmail($email){
+    public function setEmail($email)
+    {
         $this->email = $email;
     }
 
-    public function getNom(){
+    public function getNom()
+    {
         return $this->nom;
     }
 
-    public function setNom($nom){
+    public function setNom($nom)
+    {
         $this->nom = $nom;
     }
 
-    public function getPrenom(){
+    public function getPrenom()
+    {
         return $this->prenom;
     }
 
-    public function setPrenom($prenom){
+    public function setPrenom($prenom)
+    {
         $this->prenom = $prenom;
     }
 
-    public function getSujet(){
+    public function getSujet()
+    {
         return $this->sujet;
     }
 
-    public function setSujet($sujet){
+    public function setSujet($sujet)
+    {
         $this->sujet = $sujet;
     }
 
-    public function getContenu(){
+    public function getContenu()
+    {
         return $this->contenu;
     }
 
-    public function setContenu($contenu){
+    public function setContenu($contenu)
+    {
         $this->contenu = $contenu;
     }
-
 }
