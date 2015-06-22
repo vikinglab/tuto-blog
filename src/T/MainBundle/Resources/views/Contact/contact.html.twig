@@ -39,6 +39,7 @@
 
                     {#Ce dernier form widget vas nous permettre d'ajouter des que nous aurions pu oublier et SURTOUT le form token sans ça votre formulaire ne sera jamais valide !!#}
                     {{ form_widget(formContact) }}
+                    {{ form_errors(formContact) }}
                     <button class="btn btn-success btn-big">Envoyer</button>
                 </form>
             </div>
