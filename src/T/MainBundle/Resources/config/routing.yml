@@ -1,3 +1,7 @@
+t_main_article:
+    resource: "@TMainBundle/Resources/config/routing/article.yml"
+    prefix:   /article
+
 t_main_homepage:
     path:     /
     defaults: { _controller: TMainBundle:Default:index }

@@ -1,0 +1,28 @@
+{% extends 'TMainBundle::layout.html.twig' %}
+
+{% block title %}
+    {#je recupere le contenu du block parent#}
+    {{ parent() }} - Article edition
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="jumbotron">
+
+                <h1>Article edit</h1>
+
+                {{ form(edit_form) }}
+
+                <ul class="record_actions">
+                    <li>
+                        <a href="{{ path('article') }}">
+                            Back to the list
+                        </a>
+                    </li>
+                    <li>{{ form(delete_form) }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -8,6 +8,13 @@
                 <div class="btn-group menu-header">
                     <a class="btn btn-default {% if app.request.get('_route') == 't_main_homepage' %}selected{% endif %}" href="{{ path('t_main_homepage') }}">Accueil</a>
                     <a class="btn btn-default {% if app.request.get('_route') == 't_main_tarif' %}selected{% endif %}" href="{{ path('t_main_tarif') }}">Tarif</a>
+                    <a class="btn btn-default
+                    {% if app.request.get('_route') == 'article' or
+                          app.request.get('_route') == 'article_show' or
+                          app.request.get('_route') == 'article_create' or
+                          app.request.get('_route') == 'article_new' or
+                          app.request.get('_route') == 'article_edit'
+                    %}selected{% endif %}" href="{{ path('article') }}">Article</a>
                     <a class="btn btn-default {% if app.request.get('_route') == 't_main_contact' %}selected{% endif %}" href="{{ path('t_main_contact') }}">Contact</a>
                 </div>
             </div>
